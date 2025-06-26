@@ -73,4 +73,4 @@ service_desk_application/
 
 ## License
 
-This project is for demonstration and educational purposes.
+Made by Anurag Verma.
