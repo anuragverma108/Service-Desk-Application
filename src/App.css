@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body, .App {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: #f7f7f7;
 }
 
 .App-logo {
@@ -34,5 +47,67 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover, .navbar a.active {
+  background: rgba(255,255,255,0.12);
+  color: #61dafb;
+}
+
+.main-content {
+  margin: 2.5rem auto;
+  max-width: 900px;
+  padding: 2.5rem 2rem;
+  background: rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  min-height: 80vh;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    padding: 1.2rem 0.5rem;
+    margin: 1rem 0.2rem;
+  }
+  .navbar ul {
+    gap: 1rem;
   }
 }
